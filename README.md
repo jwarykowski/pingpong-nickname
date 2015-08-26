@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jonathanchrisp/pingpong-nickname.svg)](https://travis-ci.org/jonathanchrisp/pingpong-nickname)
+
 # pingpong-nickname
 A npm package for an awesome ping pong nickname
 
