@@ -25,10 +25,9 @@ var pingPongNickname = new PingPongNickname({
 The client must be created with a host or an error will be thrown.
 
 ## Using the client
-Call `pingPongNickname.createPlayer(options, callback)` with the following parameters:
+Call `pingPongNickname.nickname(callback)` with the following parameters:
 
 ```
-@param {object} options The request options to pass with your api call
 @param {function} callback A callback function. Will be sent the following params:
     @param {string} error An error
     @param {object} response The server response
