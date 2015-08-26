@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/jonathanchrisp/pingpong-nickname.svg)](https://travis-ci.org/jonathanchrisp/pingpong-nickname)
+[![npm version](https://badge.fury.io/js/pingpong-nickname.svg)](http://badge.fury.io/js/pingpong-nickname)
 
 # pingpong-nickname
 A npm package for an awesome ping pong nickname
