@@ -4,7 +4,7 @@
   "description": "A npm package for an awesome ping pong nickname",
   "main": "index.js",
   "scripts": {
-    "test": "istanbul cover _mocha test",
+    "test": "istanbul cover _mocha test && jshint . && jscs .",
     "lint": "jshint . && jscs ."
   },
   "repository": {
