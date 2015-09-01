@@ -51,7 +51,7 @@ function PingPongNickname(options, reqDefaults) {
 }
 
 PingPongNickname.prototype.nickname = function (cb) {
-    this.get('/nickname', cb);
+    this.get('/', cb);
 };
 
 module.exports = PingPongNickname;
