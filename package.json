@@ -1,6 +1,6 @@
 {
   "name": "pingpong-nickname",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A npm package for an awesome ping pong nickname",
   "main": "index.js",
   "scripts": {
