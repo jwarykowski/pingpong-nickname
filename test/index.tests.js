@@ -116,12 +116,12 @@ describe('index', function () {
                     beforeEach(function () {
                         getStub = sandbox.stub(pingPongNickname, 'get');
 
-                        pingPongNickname.get('/nickname', {}, function () {});
+                        pingPongNickname.get('/', {}, function () {});
                     });
 
                     it('gets passed the correct arguments', function () {
                         expect(getStub.called).toEqual(true);
-                        expect(getStub.args[0][0]).toEqual('/nickname');
+                        expect(getStub.args[0][0]).toEqual('/');
                         expect(getStub.args[0][1]).toEqual({});
                         expect(typeof(getStub.args[0][2])).toEqual('function');
                     });
@@ -130,12 +130,12 @@ describe('index', function () {
                 describe('request call', function () {
                     describe('with options', function () {
                         beforeEach(function () {
-                            pingPongNickname.get('/nickname', {}, function () {});
+                            pingPongNickname.get('/', {}, function () {});
                         });
 
                         it('gets passed the correct options', function () {
                             expect(stubs.request.get.args[0][0].uri).
-                                toEqual('https://yourhost.com/nickname');
+                                toEqual('https://yourhost.com/');
                         });
 
                         it('gets passed a callback function', function () {
@@ -145,12 +145,12 @@ describe('index', function () {
 
                     describe('without no options', function () {
                         beforeEach(function () {
-                            pingPongNickname.get('/nickname', function () {});
+                            pingPongNickname.get('/', function () {});
                         });
 
                         it('gets passed the correct options', function () {
                             expect(stubs.request.get.args[0][0].uri).
-                                toEqual('https://yourhost.com/nickname');
+                                toEqual('https://yourhost.com/');
                         });
 
                         it('gets passed a callback function', function () {
@@ -182,7 +182,7 @@ describe('index', function () {
                         });
 
                         it('calls callback with error if error returned', function () {
-                            pingPongNickname.get('/nickname', {}, callbackSpy);
+                            pingPongNickname.get('/', {}, callbackSpy);
                             expect(callbackSpy.calledOnce).toEqual(true);
                             expect(callbackSpy.calledWith('Fake Error')).toEqual(true);
                         });
@@ -206,7 +206,7 @@ describe('index', function () {
                         });
 
                         it('calls callback with results if no error returned', function () {
-                            pingPongNickname.get('/nickname', {}, callbackSpy);
+                            pingPongNickname.get('/', {}, callbackSpy);
 
                             expect(callbackSpy.calledOnce).toEqual(true);
                             expect(callbackSpy.calledWith(null, {
@@ -244,7 +244,7 @@ describe('index', function () {
 
             it('it calls get and passes the correct arguments', function () {
                 expect(getStub.calledOnce).toEqual(true);
-                expect(getStub.args[0][0]).toEqual('/nickname');
+                expect(getStub.args[0][0]).toEqual('/');
                 expect(typeof(getStub.args[0][1])).toEqual('function');
             });
         });
